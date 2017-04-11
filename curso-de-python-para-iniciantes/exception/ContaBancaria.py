@@ -8,7 +8,7 @@ class ContaBancaria:
     def saque(self, valor):
         saldo_temp = (self.saldo - valor)
         if saldo_temp <= 0:
-            msg = 'sem saldo suficiente para sacar R$%d' % (valor,)
+            msg = 'sem saldo suficiente para sacar R$%d' % (valor)
             raise SaqueError(msg)
         else:
             self.saldo -= valor
